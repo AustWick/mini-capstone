@@ -5,7 +5,7 @@ class PresidentsController < ApplicationController
   end
 
   def all_presidents_action
-    @president = President.all
+    @presidents = President.all
     render 'all_presidents_page.html.erb'
   end
 end

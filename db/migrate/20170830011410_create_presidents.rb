@@ -4,7 +4,6 @@ class CreatePresidents < ActiveRecord::Migration[5.1]
       t.string :first_name
       t.string :last_name
       t.integer :price
-      t.string :chef
       t.string :description
       t.string :termination
 
