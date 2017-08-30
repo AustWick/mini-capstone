@@ -1,2 +1,6 @@
 <h1>'Want a presidential roommate?'</h1>
-<h2></h2>
+<% @presidents.each do |president| %>
+<h2><%= president.first_name %> <%= president.last_name %></h2>
+<h3>$<%= president.price %></h3>
+<h3><%= president.termination %>: <%= president.description %></h3>
+<% end %>

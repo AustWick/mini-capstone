@@ -14,6 +14,8 @@ president = President.new(
                           description: "The first and $1 president. Invented America, sturdy fellow."
                           )
 
+president.save
+
 president = President.new(
                           first_name: "John",
                           last_name: "Adams",
@@ -21,6 +23,8 @@ president = President.new(
                           termination: "1801",
                           description: "The second president. Played by Paul Giamatti."
                           )
+
+president.save
 
 president = President.new(
                           first_name: "Thomas",
@@ -30,6 +34,8 @@ president = President.new(
                           description: "The third president. He speaks French so he cost more."
                           )
 
+president.save
+
 president = President.new(
                           first_name: "James",
                           last_name: "Madison",
@@ -37,6 +43,8 @@ president = President.new(
                           termination: "1817",
                           description: "The fourth president. Good at writing, discout for height."
                           )
+
+president.save
 
 president = President.new(
                           first_name: "James",
@@ -46,6 +54,8 @@ president = President.new(
                           description: "The fifth president. Good feeling and generally chill dude."
                           )
 
+president.save
+
 president = President.new(
                           first_name: "John Quincy",
                           last_name: "Adams",
@@ -53,6 +63,8 @@ president = President.new(
                           termination: "1829",
                           description: "The sixth president. No bundle deals when you buy his father."
                           )
+
+president.save
 
 president = President.new(
                           first_name: "Andrew",
@@ -62,6 +74,8 @@ president = President.new(
                           description: "The seventh president. Hates paper money so he's free."
                           )
 
+president.save
+
 president = President.new(
                           first_name: "Martin",
                           last_name: "Van Buren",
@@ -69,6 +83,8 @@ president = President.new(
                           termination: "1841",
                           description: "The eighth president. Ignore that he's Dutch and he's first American president."
                           )
+
+president.save
 
 president = President.new(
                           first_name: "William Henry",
@@ -78,6 +94,8 @@ president = President.new(
                           description: "The ninth president. Only lasts a month."
                           )
 
+president.save
+
 president = President.new(
                           first_name: "John",
                           last_name: "Tyler",
@@ -85,6 +103,8 @@ president = President.new(
                           termination: "1845",
                           description: "The tenth president. Joined the confederacy before dying so watch out."
                           )
+
+president.save
 
 president = President.new(
                           first_name: "James",
@@ -94,6 +114,8 @@ president = President.new(
                           description: "The eleventh president. Will always do everything he says he will."
                           )
 
+president.save
+
 president = President.new(
                           first_name: "Zachary",
                           last_name: "Taylor",
@@ -101,6 +123,8 @@ president = President.new(
                           termination: "1850",
                           description: "The twelth president. Will last just a tad longer than Harrison."
                           )
+
+president.save
 
 president = President.new(
                           first_name: "Millard",
@@ -110,6 +134,8 @@ president = President.new(
                           description: "The thirteenth president. Unlucky and non-commital, but has a funny name."
                           )
 
+president.save
+
 president = President.new(
                           first_name: "Franklin",
                           last_name: "Pierce",
@@ -117,6 +143,8 @@ president = President.new(
                           termination: "1857",
                           description: "The fourteenth president. Has a bit of alcoholism."
                           )
+
+president.save
 
 president = President.new(
                           first_name: "James",
@@ -126,6 +154,8 @@ president = President.new(
                           description: "The fifteenth president. Celibate so don't worry about having people over."
                           )
 
+president.save
+
 president = President.new(
                           first_name: "Abraham",
                           last_name: "Lincoln",
@@ -133,6 +163,8 @@ president = President.new(
                           termination: "1865",
                           description: "The sixteenth president. High demand, just keep out of reach of actors."
                           )
+
+president.save
 
 president = President.new(
                           first_name: "Andrew",
@@ -142,6 +174,8 @@ president = President.new(
                           description: "The seventeenth president. Buy him if you want to undo Lincoln's work."
                           )
 
+president.save
+
 president = President.new(
                           first_name: "Ulysses",
                           last_name: "Grant",
@@ -149,6 +183,8 @@ president = President.new(
                           termination: "1877",
                           description: "The eigthteenth president. A little naive but comes with a free horse."
                           )
+
+president.save
 
 president = President.new(
                           first_name: "Rutherford",
@@ -158,6 +194,8 @@ president = President.new(
                           description: "The ninteenth president. Alright at lawyering, beard needs maintenance."
                           )
 
+president.save
+
 president = President.new(
                           first_name: "James",
                           last_name: "Garfield",
@@ -165,3 +203,5 @@ president = President.new(
                           termination: "1881",
                           description: "The twentieth president. Hates mondays and loves lasagna."
                           )
+
+president.save
