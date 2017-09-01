@@ -1,11 +1,24 @@
 class PresidentsController < ApplicationController
-  def one_president_action
-    @president = President.last
-    render 'one_president_page.html.erb'
+  def index
+    @presidents = President.all
   end
 
-  def all_presidents_action
-    @presidents = President.all
-    render 'all_presidents_page.html.erb'
+  def new
+
   end
+
+  def create
+    president = President.new(
+
+
+
+                              )
+  president.save
+  end  
+
+
+  def show
+    @president = President.find(params[:id])
+  end
+
 end
