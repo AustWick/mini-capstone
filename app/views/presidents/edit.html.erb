@@ -1,5 +1,5 @@
-<h1>New President</h1>
-<%= form_tag '/presidents', method: :post do %>
+<h1>Edit a recipe</h1>
+<%= form_tag '/presidents/#{@President.id}', method: :patch do %>
 <div>
   <input type="text" name="first_name"> <input type="text" name="last_name">
 </div>
@@ -9,4 +9,5 @@
 <div>
   <input type="text" name="termination"> <input type="text" name="description">
 </div>
+<input type="submit" value="Update President">
 <% end %>
