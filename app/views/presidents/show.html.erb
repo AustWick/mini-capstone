@@ -1,7 +1,8 @@
 <h1>'Want a presidential roommate?'</h1>
+<h4><%= @discout %></h4>
 <h2><%= @president.first_name %> <%= @president.last_name %></h2>
 <h3>$<%= @president.price %></h3>
 <h3><%= @president.termination %>: <%= @president.description %></h3>
 
 <%= link_to "Assinate Presient", "/presidents/#{ @president.id }", method: :delete, class: "btn btn-danger" %>
-
+<%= link_to "Edit Presient", "/presidents/#{ @president.id }/edit", class: "btn btn-warning" %>

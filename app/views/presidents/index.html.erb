@@ -1,7 +1,25 @@
-<h1>Want a presidential roommate?</h1>
-<% @presidents.each do |president| %>
-  <h2><a href="/presidents/<%= president.id %>"><%= president.first_name %></a> <a href="/presidents/<%= president.id %>"><%= president.last_name %></a> </h2>
-  <h3> $<%= president.price %></h3>
-  <h3><%= president.termination %> <%= president.description %></h3>
-<% end %>
+<div class="row">
+  <h1>Want a presidential roommate?</h1>
+  
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sorts
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="/presidents/?sort=price&dir=asc">Sort by lowest price</a>
+    <a class="dropdown-item" href="/presidents/?sort=price&dir=desc">Sort by highest price</a>
+  </div>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/presidents/?discount=true">Discount</a>
+  <a class="navbar-brand" href= "/presidents/random">Random</a>
+</nav>
+
+  <% @presidents.each do |president| %>
+   <div class="col-md-4 col-sm-6 product-index-single">
+    <h2><a href="/presidents/<%= president.id %>"><%= president.first_name %></a> <a href="/presidents/<%= president.id %>"><%= president.last_name %></a> </h2>
+    <h3> $<%= number_to_currency(president.price) %></h3>
+    <h3><%= president.termination %> <%= president.description %></h3>
+   </div>
+  <% end %>
+</div>

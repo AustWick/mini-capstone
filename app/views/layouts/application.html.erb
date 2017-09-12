@@ -9,6 +9,22 @@
   </head>
 
   <body>
+    <h1><a href='/'>Presidents</a></h1>
+    <a href="presidents/new">New President</a>
+
+    <% flash.each do |name, message| %>
+      <p><%= message %></p>
+    <% end %>
     <%= yield %>
+
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sorts
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Sort by lowest price</a>
+    <a class="dropdown-item" href="#">Sort by highest price</a>
+  </div>
+</div>
   </body>
 </html>

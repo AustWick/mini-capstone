@@ -1,12 +1,13 @@
 <h1>New President</h1>
-<%= form_tag '/presidents', method: :post do %>
+<%= form_tag '/presidents/', method: :post do %>
 <div>
-  <input type="text" name="first_name"> <input type="text" name="last_name">
+  First Name<input type="text" name="first_name"> Last Name<input type="text" name="last_name">
 </div>
 <div>
-  $<input type="text" name="price">
+  Price $<input type="text" name="price">
 </div>
 <div>
-  <input type="text" name="termination"> <input type="text" name="description">
+  Year<input type="text" name="termination"> Desc<input type="text" name="description">
 </div>
+<input type="submit" name="Birth president">
 <% end %>
