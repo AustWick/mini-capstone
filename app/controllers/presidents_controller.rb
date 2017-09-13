@@ -94,4 +94,3 @@ class PresidentsController < ApplicationController
 
 
 end
-
