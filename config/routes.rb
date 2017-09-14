@@ -11,4 +11,11 @@ Rails.application.routes.draw do
   patch '/presidents/:id' => 'presidents#update'
 
   delete '/presidents/:id' => 'presidents#destroy'
+
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
+
+  get "/login" => "sessions#new"
+  post "/login" => "sessions#create"
+  get "/logout" => "sessions#destroy"
 end
