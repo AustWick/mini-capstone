@@ -6,3 +6,14 @@
 
 <%= link_to "Assinate Presient", "/presidents/#{ @president.id }", method: :delete, class: "btn btn-danger" %>
 <%= link_to "Edit Presient", "/presidents/#{ @president.id }/edit", class: "btn btn-warning" %>
+
+<%= form_tag '/orders', method: :post do %>
+<div>
+  Quantity: <input type="text" name="quantity">
+</div>
+<div>
+  Product ID: <input type="text" name="president_id">
+</div>
+<input type="submit" value="Buy Now!">
+<% end %>
+

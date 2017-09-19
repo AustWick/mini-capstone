@@ -76,21 +76,5 @@ class PresidentsController < ApplicationController
     @president = President.all.sample
     render "show.html.erb"
   end
-  
-
-  # def discout
-  #   if price > 4000
-  #     puts "Discount Item!"
-  #   end
-      
-  #   else
-  #     puts "Everyday Value!"
-  #   end  
-  # end
-
-  # def tax
-  #   price = price * 1.09 
-  # end  
-
-
+   
 end

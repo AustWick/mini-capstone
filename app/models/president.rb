@@ -1,5 +1,8 @@
 class President < ApplicationRecord
-
+  belongs_to :supplier
+  has_many :images
+  has_many :orders
+  
   def discout
     if price > 4000
       puts "Discount Item!"
@@ -11,9 +14,12 @@ class President < ApplicationRecord
   end
 
   def tax
-    price = price * 1.09 
+    return price * 0.09 
   end  
 
+  def total
+    return tax * price
+  end
   def self.random
     presidents = President.all
     all_ids = []
