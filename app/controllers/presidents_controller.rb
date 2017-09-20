@@ -14,10 +14,6 @@ class PresidentsController < ApplicationController
     if discount
       @presidents = @presidents.where("price <= ?", 4000)
     end
-      
-
-    # if sort_edesc
-    #   @presidents = @presidents.order(sort_desc)
   end
 
   def new

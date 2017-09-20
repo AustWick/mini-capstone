@@ -1,0 +1,2 @@
+class CategoryPresident < ApplicationRecord
+end

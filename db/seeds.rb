@@ -78,7 +78,7 @@ president = President.new(
                           img:
                           price: 0,
                           termination: "1837",
-                          description: "The seventh president. Hates paper money so he's free."
+                          description: "The seventh and $20 president. Hates paper money so he's free."
                           )
 
 president.save
@@ -225,3 +225,8 @@ president = President.new(
                           )
 
 president.save
+
+
+#---
+
+# Category.
