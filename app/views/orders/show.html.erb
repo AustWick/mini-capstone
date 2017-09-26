@@ -8,3 +8,4 @@
 <h2>Total: <%= number_to_currency(@order.total) %> </h2>
 <h3>Product: <%= President.find(@order.president_id).first_name %> <%= President.find(@order.president_id).last_name %></h3>
 <h3>Purchased: <%= @order.created_at %></h3>
+<input type="submit" value="Add this to cart">

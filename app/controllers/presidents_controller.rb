@@ -71,6 +71,5 @@ class PresidentsController < ApplicationController
   def random
     @president = President.all.sample
     render "show.html.erb"
-  end
-   
+  end  
 end

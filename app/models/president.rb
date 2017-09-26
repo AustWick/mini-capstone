@@ -24,6 +24,7 @@ class President < ApplicationRecord
   def total
     return tax * price
   end
+
   def self.random
     presidents = President.all
     all_ids = []
@@ -31,4 +32,4 @@ class President < ApplicationRecord
       all_ids << presidents.id
     end
     all_ids.example  
-  end  
+end  
