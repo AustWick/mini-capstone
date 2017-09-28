@@ -15,4 +15,13 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
   end
+
+  def create
+    carted_products = current_user.current_cart
+    carted_products.each do |carted_product|
+      subtotal = subtotal + carted_product.president.price + carted_product.quantity
+    end
+
+  redirect_to "/orders/#{order.id}"
+  end  
 end

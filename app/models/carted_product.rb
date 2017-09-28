@@ -4,14 +4,7 @@ class CartedProduct < ApplicationRecord
   belongs_to :order_id, optional: true
 
   def create
-    cart = CartedProduct.new(
-                            user_id: current_user.id,
-                            president_id: params[:president_id],
-                            quantity: params[:quantity],
-                            status: "carted"
-                          end
-    cart.save
-    flash[:success] = "Carted"
+    carted_products = current_user.current_cart
     redirect_to "/checkout"
   end
 
