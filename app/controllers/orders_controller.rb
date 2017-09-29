@@ -1,27 +1,17 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
+
   def create
-    order = Order.new(
-                      user_id: current_user.id,
-                      quantity: params[:quantity],
-                      president_id: params[:president_id],
-                      subtotal: President.find(params[:president_id]).price.to_i * params[:quantity].to_i,
-                      tax: President.find(params[:president_id]).price.to_i * params[:quantity].to_i * 0.09,
-                      total: ((President.find(params[:president_id]).price.to_i * params[:quantity].to_i)) + ((President.find(params[:president_id]).price.to_i * params[:quantity].to_i) * 0.09)
-                      )
-    order.save
+    carted_products = current_user.current_cart
+    order = Order.create(user_id: current_user.id)
+    carted_products.update_all(status: "ordered", order_id: order.id)
+    order.calculate_totals
+
     redirect_to "/orders/#{order.id}"
   end
 
   def show
     @order = Order.find(params[:id])
+    redirect_to '/' unless current_user && current_user.id == @order.user_id
   end
-
-  def create
-    carted_products = current_user.current_cart
-    carted_products.each do |carted_product|
-      subtotal = subtotal + carted_product.president.price + carted_product.quantity
-    end
-
-  redirect_to "/orders/#{order.id}"
-  end  
 end
